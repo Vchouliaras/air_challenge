@@ -11,7 +11,7 @@ const Thumbnail = forwardRef<HTMLDivElement, ThumbnailProps>((props, ref) => {
       <img
         width={400}
         height={400}
-        src={props.imgUrl ?? 'public/placeholder.jpeg'}
+        src={props.imgUrl ?? '/placeholder.jpeg'}
         alt=""
         className="max-h-[200px] max-w-[200px] object-cover rounded"
       />
