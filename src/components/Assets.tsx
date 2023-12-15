@@ -23,7 +23,7 @@ const Assets = () => {
     <h2>Loading</h2>
   ) : (
     <>
-      <h2>Assets ({(data?.pages[0] as unknown as AssetModels.Data).total})</h2>
+      <h2>Assets ({data?.pages[0].data.total})</h2>
       <div className="flex flex-row flex-wrap">
         {data?.pages.map((group, i: number) => (
           <Fragment key={i}>
