@@ -1,5 +1,5 @@
-import * as Asset from '../models/Asset'
-import * as Board from '../models/Board'
+import * as Asset from '../models/Asset';
+import * as Board from '../models/Board';
 
 export const fetchBoards = async (): Promise<Board.ApiResponse> => {
   const requestBody = {
@@ -30,9 +30,6 @@ export const fetchBoards = async (): Promise<Board.ApiResponse> => {
 
   return await response.json();
 };
-
-
-
 
 export const fetchAssets = async ({ pageParam = 0 }): Promise<Asset.ApiResponse> => {
   const requestBody = {
