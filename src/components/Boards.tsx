@@ -7,11 +7,11 @@ const Boards = () => {
   const { isFetching, data } = useQuery({ queryKey: ['boards'], queryFn: fetchBoards });
 
   return isFetching ? (
-    <h2>Loading</h2>
+    <h2 className='my-10'>Loading...</h2>
   ) : (
     <>
       <h2>Boards ({data?.data.length})</h2>
-      <div className="flex flex-row">
+      <div className="mt-4 mb-16 flex flex-row flex-wrap">
         {data?.data.map((board: BoardModels.DataItem) => (
           <Thumbnail
             key={board.id}

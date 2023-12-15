@@ -20,11 +20,11 @@ const Assets = () => {
   }, [inView, hasNextPage, isFetchingNextPage]);
 
   return isLoading ? (
-    <h2>Loading</h2>
+    <h2 className='my-10'>Loading...</h2>
   ) : (
     <>
       <h2>Assets ({data?.pages[0].data.total})</h2>
-      <div className="flex flex-row flex-wrap">
+      <div className="mt-4 mb-16 flex flex-row flex-wrap">
         {data?.pages.map((group, i: number) => (
           <Fragment key={i}>
             {group.data.clips.map((clip: AssetModels.Clip, y: number) => {
@@ -49,7 +49,7 @@ const Assets = () => {
           </Fragment>
         ))}
       </div>
-      {isFetchingNextPage && <h3>Loading...</h3>}
+      {isFetchingNextPage && <h3 className='my-10'>Loading...</h3>}
     </>
   );
 };
